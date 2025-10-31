@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tríptico Juego de la Memoria</title>
+<style>
+  body {
+    font-family: "Arial", sans-serif;
+    background: radial-gradient(circle at center, #020617 0%, #000000 100%);
+    color: #00f5ff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s ease;
+  }
+
+  h1.titulo {
+    text-align: center;
+    color: #00ff88;
+    text-shadow: 0 0 20px #00ff88, 0 0 40px #00ffaa;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    max-width: 100%;
+    transition: font-size 0.4s ease;
+  }
+
+  /* 🔹 Diseño fluido del tríptico */
+  .triptico {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1400px;
+    transition: all 0.4s ease;
+  }
+
+  .panel {
+    background: rgba(0, 255, 255, 0.05);
+    border: 2px solid #00e5ff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .panel:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px #00e5ff, 0 0 60px #00f5ff;
+  }
+
+  .panel h2 {
+    text-align: center;
+    text-shadow: 0 0 15px #00f5ff;
+    margin-bottom: 15px;
+  }
+
+  .panel img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ffaa;
+    transition: width 0.3s ease;
+  }
+
+  .panel p {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+    color: #ffffff;
+  }
+
+  .panel ul {
+    list-style: none;
+    padding-left: 0;
+    color: #00ffe0;
+  }
+
+  .panel ul li::before {
+    content: "• ";
+    color: #00ff88;
+  }
+
+  .agradecimiento {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.5em;
+    color: #00ff88;
+    text-shadow: 0 0 20px #00ff88, 0 0 40px #00ffaa;
+  }
+
+  /* 🔹 Ajuste suave según el tamaño */
+  @media (max-width: 1200px) {
+    h1.titulo {
+      font-size: 2.2em;
+    }
+  }
+
+  @media (max-width: 900px) {
+    h1.titulo {
+      font-size: 2em;
+    }
+    .panel img {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    h1.titulo {
+      font-size: 1.7em;
+    }
+    .panel img {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h1 class="titulo">📄 Información del Juego de la Memoria</h1>
+
+<div class="triptico">
+
+  <div class="panel">
+    <h2>🎓 Introducción</h2>
+    <img src="image.png" alt="Logo INCOS">
+    <p>El Juego de la Memoria del INCOS El Alto es una herramienta educativa interactiva que permite a los estudiantes mejorar su memoria visual y concentración. Combina aprendizaje con entretenimiento, fomentando habilidades cognitivas mientras se divierten.</p>
+  </div>
+
+  <div class="panel">
+    <h2>🧩 Cómo se Juega</h2>
+    <img src="img1.png" alt="Tablero del Juego">
+    <p>El tablero contiene cartas boca abajo. El jugador voltea dos cartas por turno intentando formar pares iguales. Si coincide, suma un acierto; si no, pierde una vida. El juego termina al descubrir todas las parejas o agotar las oportunidades.</p>
+  </div>
+
+  <div class="panel">
+    <h2>💻 Tecnologías</h2>
+    <img src="img2.png" alt="Tecnologías">
+    <ul>
+      <li><strong>HTML5:</strong> Estructura de la página y elementos interactivos.</li>
+      <li><strong>CSS3:</strong> Estilos, animaciones y diseño responsivo.</li>
+      <li><strong>JavaScript:</strong> Lógica del juego, control de aciertos y vidas.</li>
+      <li><strong>Visual Studio Code:</strong> Editor de código que permite probar y depurar eficientemente.</li>
+    </ul>
+  </div>
+
+  <div class="panel">
+    <h2>💡 Beneficios</h2>
+    <img src="img3.png" alt="Beneficios">
+    <p>El juego ayuda a mejorar la memoria visual, atención y rapidez mental. Además, estimula el aprendizaje mediante la diversión, fomentando la concentración y la motivación de los estudiantes para desarrollar habilidades cognitivas importantes.</p>
+  </div>
+
+  <div class="panel">
+    <h2>📚 Uso Educativo</h2>
+    <img src="img4.png" alt="Uso educativo">
+    <p>Este juego se utiliza en aulas y actividades pedagógicas para reforzar la memoria y la atención. Permite que los estudiantes interactúen con la tecnología mientras aplican habilidades cognitivas y mejoran la retención de información visual.</p>
+  </div>
+
+  <div class="panel">
+    <h2>🔧 Sugerencias</h2>
+    <img src="img10.png" alt="Mejoras">
+    <p>Para futuras versiones se puede agregar más niveles de dificultad, temporizador, sonidos y recompensas visuales. Esto aumentaría la motivación y mantendría a los estudiantes desafiados mientras aprenden.</p>
+  </div>
+
+  <div class="panel">
+    <h2>🏆 Conclusión</h2>
+    <img src="img8.png" alt="Conclusión">
+    <p>El Juego de la Memoria es un recurso educativo efectivo que combina diversión y aprendizaje. Su diseño interactivo y llamativo convierte el aprendizaje en una experiencia motivadora para los estudiantes del INCOS El Alto.</p>
+  </div>
+
+  <div class="panel">
+    <h2>🚀 Innovaciones Futuras</h2>
+    <img src="img6.png" alt="Innovaciones">
+    <p>Se busca integrar niveles avanzados, juegos temáticos educativos, interacción en línea con otros jugadores y análisis de resultados para mejorar la experiencia de aprendizaje.</p>
+  </div>
+
+</div>
+
+<div class="agradecimiento">
+  MUCHAS GRACIAS POR LA VISITA
+</div>
+
+</body>
+</html>
